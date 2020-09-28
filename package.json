@@ -1,0 +1,29 @@
+{
+  "name": "notes",
+  "description": "",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Zander Martineau",
+    "url": "https://zander.wtf"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby clean && gatsby build",
+    "start": "gatsby develop"
+  },
+  "dependencies": {
+    "gatsby": "^2.23.18",
+    "gatsby-theme-code-notes": "^1.15.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RealOrangeOne/notes"
+  },
+  "bugs": {
+    "url": "https://github.com/RealOrangeOne/notes/issues"
+  }
+}
