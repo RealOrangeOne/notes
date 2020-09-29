@@ -4,10 +4,6 @@
   "private": true,
   "version": "0.0.0",
   "main": "index.js",
-  "author": {
-    "name": "Zander Martineau",
-    "url": "https://zander.wtf"
-  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby clean && gatsby build",
