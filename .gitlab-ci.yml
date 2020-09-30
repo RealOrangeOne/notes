@@ -3,9 +3,7 @@ image: "node:lts-slim"
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-    - node_modules/
-    - .cache/
-    - public/
+    - ~/.npm
 
 pages:
   stage: deploy
