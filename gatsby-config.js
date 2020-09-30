@@ -3,6 +3,7 @@ module.exports = {
     title: 'notes',
     description: 'A description',
     author: 'TheOrangeOne',
+    siteUrl: 'https://notes.theorangeone.net'
   },
   plugins: [
     {
@@ -10,9 +11,11 @@ module.exports = {
       options: {
         contentPath: 'notes',
         basePath: '/',
-        showThemeInfo: true,
+        showThemeInfo: false,
         showDescriptionInSidebar: true,
       },
     },
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap'
   ],
 }
