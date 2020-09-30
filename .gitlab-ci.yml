@@ -1,0 +1,19 @@
+image: "node:lts-slim"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .cache/
+    - public/
+
+pages:
+  stage: deploy
+  script:
+    - npm ci --production
+    - npm run release
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
