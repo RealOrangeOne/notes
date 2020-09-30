@@ -9,7 +9,7 @@ COPY . /app
 
 RUN npm ci --production
 
-RUN npm run build
+RUN npm run release
 
 # Production run
 FROM nginx:stable-alpine
