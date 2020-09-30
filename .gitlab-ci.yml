@@ -3,12 +3,13 @@ image: "node:lts-slim"
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-    - ~/.npm
+    - $(npm config get cache)
     - ./.cache
 
 pages:
   stage: deploy
   script:
+    - npm config get cache
     - npm ci --production
     - npm run release
   artifacts:
