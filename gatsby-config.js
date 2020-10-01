@@ -17,6 +17,13 @@ module.exports = {
     },
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-sri'
+    'gatsby-plugin-sri',
+    {
+      resolve: 'gatsby-plugin-plausible',
+      options: {
+        domain: 'notes.theorangeone.net',
+        customDomain: 'plausible.theorangeone.net'
+      }
+    }
   ],
 }
