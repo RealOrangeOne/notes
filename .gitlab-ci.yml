@@ -10,7 +10,7 @@ cache:
 pages:
   stage: deploy
   script:
-    - yarn install --prefer-offline --production
+    - yarn install --prefer-offline --production --network-timeout 100000
     - npm run release
   artifacts:
     paths:
