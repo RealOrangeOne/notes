@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'notes',
-    description: 'A description',
+    title: 'Notes',
+    description: 'Notes and snippets and things',
     author: 'TheOrangeOne',
     siteUrl: 'https://notes.theorangeone.net'
   },
