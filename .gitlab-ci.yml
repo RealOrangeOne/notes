@@ -3,13 +3,14 @@ image: "node:lts-slim"
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-    - .npm
+    - node_modules/
+    - .yarn
     - .cache
 
 pages:
   stage: deploy
   script:
-    - npm ci --cache .npm --prefer-offline --production
+    - yarn install --prefer-offline --production
     - npm run release
   artifacts:
     paths:
