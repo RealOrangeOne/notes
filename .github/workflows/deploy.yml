@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+
+      - uses: egordm/gha-yarn-node-cache@v1
+
+      - run: yarn install
+      - run: npm run release
+
+      - name: Archive
+        uses: actions/upload-artifact@v2
+        with:
+          name: notes
+          path: public
+
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: notes.theorangeone.net
+          AWS_ACCESS_KEY_ID: github
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.MINIO_SECRET_KEY }}
+          SOURCE_DIR: public
+          AWS_S3_ENDPOINT: https://pages.theorangeone.net
