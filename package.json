@@ -6,9 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby clean && gatsby build",
-    "start": "gatsby develop",
-    "compress": "gzipper compress -e gz --verbose public/ public/",
-    "release": "npm run build && npm run compress"
+    "start": "gatsby develop"
   },
   "dependencies": {
     "gatsby": "^2.23.18",
@@ -17,7 +15,6 @@
     "gatsby-plugin-sitemap": "^2.4.14",
     "gatsby-plugin-sri": "^1.1.0",
     "gatsby-theme-code-notes": "^1.15.1",
-    "gzipper": "^4.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
