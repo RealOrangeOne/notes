@@ -4,7 +4,7 @@ static:
   before_script:
     - yarn install --cache-folder .yarn --prefer-offline --production --network-timeout 100000
   script:
-    - npm run release
+    - npm run build
   artifacts:
     name: '$CI_JOB_ID'
     paths:
