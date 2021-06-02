@@ -1,0 +1,25 @@
+static:
+  image: node:alpine
+  stage: build
+  before_script:
+    - yarn install --cache-folder .yarn --prefer-offline --production --network-timeout 100000
+  script:
+    - npm run release
+  artifacts:
+    name: '$CI_JOB_ID'
+    paths:
+      - ./public
+    expire_in: 30 mins
+
+deploy:
+  image: alpine
+  stage: deploy
+  dependencies:
+    - static
+  only:
+    - master
+  environment:
+    name: notes
+    url: https://notes.theorangeone.net
+  script:
+    - ls -alh ./public
