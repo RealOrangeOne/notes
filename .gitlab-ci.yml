@@ -12,7 +12,7 @@ static:
     expire_in: 30 mins
 
 deploy:
-  image: alpine
+  image: rclone/rclone:1
   stage: deploy
   dependencies:
     - static
@@ -22,4 +22,8 @@ deploy:
     name: notes
     url: https://notes.theorangeone.net
   script:
-    - ls -alh ./public
+    - rclone sync public/ pages:notes.theorangeone.net/
+  variables:
+    RCLONE_CONFIG_PAGES_TYPE: webdav
+    RCLONE_CONFIG_PAGES_URL: https://pages.theorangeone.net
+    RCLONE_CONFIG_PAGES_USER: github
