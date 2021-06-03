@@ -12,7 +12,7 @@ static:
     expire_in: 30 mins
 
 deploy:
-  image: rclone/rclone:1
+  image: alpine
   stage: deploy
   dependencies:
     - static
@@ -21,6 +21,8 @@ deploy:
   environment:
     name: notes
     url: https://notes.theorangeone.net
+  before_script:
+    - apk add --no-cache rclone
   script:
     - rclone sync public/ pages:notes.theorangeone.net/
   variables:
