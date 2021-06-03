@@ -1,6 +1,11 @@
 static:
   image: node:alpine
   stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .yarn
+      - .cache
   before_script:
     - yarn install --cache-folder .yarn --prefer-offline --production --network-timeout 100000
   script:
