@@ -22,7 +22,7 @@ module.exports = {
       resolve: 'gatsby-plugin-plausible',
       options: {
         domain: 'notes.theorangeone.net',
-        customDomain: 'plausible.theorangeone.net'
+        customDomain: 'elbisualp.theorangeone.net'
       }
     }
   ],
