@@ -1,3 +1,7 @@
+stages:
+  - build
+  - deploy
+
 static:
   image: node:alpine
   stage: build
@@ -17,21 +21,17 @@ static:
     expire_in: 30 mins
 
 deploy:
-  image: alpine
+  image: dokku/ci-docker-image:latest
   stage: deploy
-  dependencies:
-    - static
   only:
     - master
   environment:
     name: notes
     url: https://notes.theorangeone.net
-  before_script:
-    - apk add --no-cache rclone
-  script:
-    - export RCLONE_CONFIG_PAGES_PASS=`rclone obscure $RCLONE_WEBDAV_PASSWORD`
-    - rclone sync public/ pages:notes.theorangeone.net/
   variables:
-    RCLONE_CONFIG_PAGES_TYPE: webdav
-    RCLONE_CONFIG_PAGES_URL: https://pages.theorangeone.net
-    RCLONE_CONFIG_PAGES_USER: github
+    GIT_REMOTE_URL: ssh://dokku@d.theorangeone.net:7743/notes
+    GIT_PUSH_FLAGS: --force
+  script:
+    - dokku-deploy
+  after_script:
+    - dokku-unlock
