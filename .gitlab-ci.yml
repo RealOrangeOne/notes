@@ -2,7 +2,7 @@ stages:
   - build
   - deploy
 
-static:
+build:
   image: node:slim
   stage: build
   cache:
