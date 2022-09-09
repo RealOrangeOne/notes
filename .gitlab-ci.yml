@@ -18,6 +18,7 @@ build:
   artifacts:
     name: "$CI_JOB_ID"
     paths:
+      - ./node_modules
       - ./public
     expire_in: 30 mins
 
