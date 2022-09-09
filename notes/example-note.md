@@ -1,8 +1,7 @@
 ---
 title: Example note
-tags:
-  - example
 emoji: 👋
+modified: 2022-09-09
 ---
 
 This is an example note, see below for some code.

@@ -9,20 +9,17 @@
     "start": "gatsby develop"
   },
   "dependencies": {
-    "gatsby": "^2.23.18",
-    "gatsby-plugin-plausible": "^0.0.6",
-    "gatsby-plugin-robots-txt": "^1.5.3",
-    "gatsby-plugin-sitemap": "^2.4.14",
+    "gatsby": "^3.14.6",
+    "gatsby-plugin-plausible": "^0.0.7",
+    "gatsby-plugin-robots-txt": "^1.7.1",
+    "gatsby-plugin-sitemap": "^4.10.0",
     "gatsby-plugin-sri": "^1.1.0",
-    "gatsby-theme-code-notes": "^1.15.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "gatsby-theme-code-notes": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/RealOrangeOne/notes"
-  },
-  "bugs": {
-    "url": "https://github.com/RealOrangeOne/notes/issues"
   }
 }
