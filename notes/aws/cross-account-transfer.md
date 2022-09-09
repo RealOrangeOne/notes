@@ -12,15 +12,14 @@ emoji: 🪣
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "*",
-            "Resource": "arn:aws:s3:::<bucket>/*"
-
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "*",
+      "Resource": "arn:aws:s3:::<bucket>/*"
+    }
+  ]
 }
 ```
 
@@ -28,18 +27,16 @@ emoji: 🪣
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::<account_id>:user/<user>"
-            },
-            "Action": "*",
-            "Resource": [
-                "arn:aws:s3:::<bucket>/*"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::<account_id>:user/<user>"
+      },
+      "Action": "*",
+      "Resource": ["arn:aws:s3:::<bucket>/*"]
+    }
+  ]
 }
 ```

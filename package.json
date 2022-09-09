@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby clean && gatsby build",
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "gatsby": "3.14.6",
@@ -21,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/RealOrangeOne/notes"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   }
 }

@@ -1,5 +1,6 @@
 stages:
   - build
+  - test
   - deploy
 
 build:
@@ -15,10 +16,16 @@ build:
   script:
     - npm run build
   artifacts:
-    name: '$CI_JOB_ID'
+    name: "$CI_JOB_ID"
     paths:
       - ./public
     expire_in: 30 mins
+
+prettier:
+  image: node:slim
+  stage: test
+  script:
+    - npm run prettier
 
 deploy:
   image: dokku/ci-docker-image:latest
