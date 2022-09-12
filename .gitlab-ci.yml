@@ -1,6 +1,5 @@
 stages:
   - build
-  - test
   - deploy
 
 build:
@@ -15,18 +14,12 @@ build:
     - npm ci --cache .npm --prefer-offline
   script:
     - npm run build
+    - npm run prettier
   artifacts:
     name: "$CI_JOB_ID"
     paths:
-      - ./node_modules
       - ./public
     expire_in: 30 mins
-
-prettier:
-  image: node:slim
-  stage: test
-  script:
-    - npm run prettier
 
 deploy:
   image: dokku/ci-docker-image:latest
