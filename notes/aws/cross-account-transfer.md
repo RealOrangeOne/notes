@@ -6,8 +6,10 @@ link: https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-acces
 emoji: 🪣
 ---
 
-1. Create S3 bucket in account A
-2. Create IAM role / user in account B
+To copy bucket contents from bucket in account A to bucket in account B:
+
+1. Create new S3 bucket in account B
+2. Create IAM role / user in account B, with access to destination bucket
 3. Add IAM inline policy to user:
 
 ```json
@@ -16,14 +18,17 @@ emoji: 🪣
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": "*",
-      "Resource": "arn:aws:s3:::<bucket>/*"
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::<source_bucket>/*",
+        "arn:aws:s3:::<source_bucket>"
+      ]
     }
   ]
 }
 ```
 
-4. Add policy to bucket
+4. Add policy to source bucket
 
 ```json
 {
@@ -34,8 +39,8 @@ emoji: 🪣
       "Principal": {
         "AWS": "arn:aws:iam::<account_id>:user/<user>"
       },
-      "Action": "*",
-      "Resource": ["arn:aws:s3:::<bucket>/*"]
+      "Action": "s3:*",
+      "Resource": ["arn:aws:s3:::<source_bucket>/*", "arn:aws:s3:::<source_bucket>"]
     }
   ]
 }
