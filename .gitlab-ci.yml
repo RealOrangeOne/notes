@@ -21,18 +21,16 @@ build:
       - ./public
     expire_in: 30 mins
 
-deploy:
-  image: dokku/ci-docker-image:latest
+pages:
+  image: alpine:latest
   stage: deploy
   only:
     - master
   environment:
     name: notes
     url: https://notes.theorangeone.net
-  variables:
-    GIT_REMOTE_URL: ssh://dokku@d.theorangeone.net:7743/notes
-    GIT_PUSH_FLAGS: --force
   script:
-    - dokku-deploy
-  after_script:
-    - dokku-unlock
+    - "true"
+  artifacts:
+    paths:
+      - public
