@@ -1,0 +1,80 @@
+site_name: Notes
+repo_url: https://github.com/RealOrangeOne/notes
+repo_name: RealOrangeOne/notes
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://theorangeone.net
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - navigation.sections
+    - navigation.index
+  icon:
+    logo: fontawesome/regular/note-sticky
+  favicon: https://theorangeone.net/favicon.ico
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+# Extensions
+markdown_extensions:
+  - attr_list
+  - abbr
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - footnotes
+  - markdown.extensions.admonition
+  - markdown.extensions.def_list
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - mdx_include:
+      base_path: docs
+
+
+plugins:
+  - search
+  - awesome-pages
+  - glightbox
+  - tags:
+      enabled: true
+      tags_file: tags.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+      exclude:
+        - tags.md
+        - README.md
