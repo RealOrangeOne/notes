@@ -1,9 +1,0 @@
-baseURL: https://notes.theorangeone.net
-title: Notes
-enableGitInfo: true
-
-cleanDestinationDir: true
-
-module:
-  imports:
-    - path: github.com/RealOrangeOne/hugo-theme-notes
