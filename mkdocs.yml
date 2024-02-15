@@ -25,6 +25,7 @@ theme:
     - navigation.index
     - toc.follow
     - search.suggest
+    - navigation.top
   icon:
     logo: fontawesome/regular/note-sticky
   favicon: https://theorangeone.net/favicon.ico
