@@ -7,6 +7,12 @@ extra:
   social:
     - icon: fontawesome/solid/globe
       link: https://theorangeone.net
+    - icon: fontawesome/brands/mastodon
+      link: https://theorangeone.net/@jake
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/RealOrangeOne
+    - icon: fontawesome/brands/github
+      link: https://github.com/RealOrangeOne
 
 theme:
   name: material
@@ -14,6 +20,8 @@ theme:
     - navigation.top
     - navigation.sections
     - navigation.index
+    - toc.follow
+    - search.suggest
   icon:
     logo: fontawesome/regular/note-sticky
   favicon: https://theorangeone.net/favicon.ico
