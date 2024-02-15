@@ -6,3 +6,4 @@ mkdocs-glightbox
 mkdocs-git-revision-date-localized-plugin
 mkdocs-minify-html-plugin
 mkdocs-rss-plugin
+material-plausible-plugin
