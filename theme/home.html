@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ super() }}
+
+    <h2>Recent notes</h2>
+
+    <ul>
+        {% for page in (nav.pages|selectattr("url", "startswith", "notes/")|sort(attribute="meta.git_creation_date_localized_raw_iso_datetime", reverse=True))[:10] %}
+            <li>
+                <a href="{{ page.url }}">{{ page.title }}</a> - {{ page.meta.git_creation_date_localized_raw_iso_date }}
+                {% for tag in page.meta.tags %}
+                    <span class="md-tag">{{ tag }}</span>
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{{ 'tags/'|url }}">View all &rarr;</a></p>
+{% endblock %}
