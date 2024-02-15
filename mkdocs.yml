@@ -16,6 +16,10 @@ extra:
       link: https://github.com/RealOrangeOne
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
+  analytics:
+    provider: plausible
+    domain: notes.theorangeone.net
+    src: https://elbisualp.theorangeone.net/js/script.js
 
 theme:
   name: material
@@ -106,3 +110,4 @@ plugins:
         as_update: false
       json_feed_enabled: false
       match_path: "notes/.*"
+  - material-plausible
