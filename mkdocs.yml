@@ -1,4 +1,5 @@
 site_name: Notes
+site_url: https://notes.theorangeone.net
 repo_url: https://github.com/RealOrangeOne/notes
 repo_name: RealOrangeOne/notes
 copyright: "&copy; TheOrangeOne"
@@ -13,6 +14,8 @@ extra:
       link: https://twitter.com/RealOrangeOne
     - icon: fontawesome/brands/github
       link: https://github.com/RealOrangeOne
+    - icon: fontawesome/solid/rss
+      link: /feed_rss_created.xml
 
 theme:
   name: material
@@ -92,3 +95,9 @@ plugins:
         - README.md
   - minify_html
   - social
+  - rss:
+      date_from_meta:
+        as_creation: "date"
+        as_update: false
+      json_feed_enabled: false
+      match_path: "notes/.*"
