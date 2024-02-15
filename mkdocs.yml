@@ -90,3 +90,4 @@ plugins:
       exclude:
         - tags.md
         - README.md
+  - minify_html
