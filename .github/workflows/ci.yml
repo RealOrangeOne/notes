@@ -35,14 +35,15 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - run: pip install -r requirements.txt
+      - uses: taiki-e/install-action@just
+
+      - run: just setup
 
       - name: Setup Pages
         uses: actions/configure-pages@v1
 
       - name: Build
-        run: |
-          mkdocs build -v
+        run: just build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
