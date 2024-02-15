@@ -16,6 +16,7 @@ theme:
   icon:
     logo: fontawesome/regular/note-sticky
   favicon: https://theorangeone.net/favicon.ico
+  custom_dir: theme/
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -33,6 +34,8 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+hooks:
+  - hooks/notes.py
 
 # Extensions
 markdown_extensions:
