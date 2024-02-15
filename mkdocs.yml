@@ -91,3 +91,4 @@ plugins:
         - tags.md
         - README.md
   - minify_html
+  - social
