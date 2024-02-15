@@ -82,8 +82,12 @@ markdown_extensions:
 
 plugins:
   - search
-  - awesome-pages
   - glightbox
+  - awesome-pages:
+      strict: true
+      order: asc
+      sort_type: natural
+      order_by: title
   - tags:
       enabled: true
       tags_file: tags.md
