@@ -1,6 +1,7 @@
 site_name: Notes
 repo_url: https://github.com/RealOrangeOne/notes
 repo_name: RealOrangeOne/notes
+copyright: "&copy; TheOrangeOne"
 
 extra:
   social:
