@@ -3,13 +3,8 @@
 {% block content %}
     {{ super() }}
 
-    <h2>Recent notes</h2>
-
-    {% set notes_index = get_page('notes/index.md') %}
-    {% set notes = get_notes() %}
-
     <ul>
-        {% for page in notes[:10] %}
+        {% for page in get_notes() %}
             <li>
                 <a href="{{ page.url }}">{{ page.title }}</a> - {{ page.meta.git_creation_date_localized_raw_iso_date }}
                 {% for tag in page.meta.tags %}
@@ -18,6 +13,4 @@
             </li>
         {% endfor %}
     </ul>
-
-    <p><a href="{{ notes_index.url }}">View all {{ notes|length }} &rarr;</a></p>
 {% endblock %}
