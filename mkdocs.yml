@@ -95,12 +95,11 @@ plugins:
       order_by: title
   - tags:
       enabled: true
-      tags_file: tags.md
+      tags_file: notes/index.md
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
       exclude:
-        - tags.md
         - README.md
         - notes/index.md
   - minify_html
