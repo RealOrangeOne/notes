@@ -26,7 +26,7 @@ theme:
   features:
     - navigation.top
     - navigation.sections
-    - navigation.index
+    - navigation.indexes
     - toc.follow
     - search.suggest
     - navigation.top
@@ -102,6 +102,7 @@ plugins:
       exclude:
         - tags.md
         - README.md
+        - notes/index.md
   - minify_html
   - social
   - rss:
