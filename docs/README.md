@@ -1,6 +1,8 @@
 ---
 template: home.html
 hide: [toc]
+search:
+  exclude: true
 ---
 
 # Notes
