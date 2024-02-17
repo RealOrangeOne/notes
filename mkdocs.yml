@@ -53,6 +53,7 @@ theme:
 
 hooks:
   - hooks/notes.py
+  - hooks/tag_nav.py
 
 # Extensions
 markdown_extensions:
