@@ -32,6 +32,7 @@ theme:
     - navigation.top
   icon:
     logo: fontawesome/regular/note-sticky
+    repo: fontawesome/brands/github
   favicon: https://theorangeone.net/favicon.ico
   custom_dir: theme/
   palette:
