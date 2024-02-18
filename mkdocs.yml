@@ -112,4 +112,6 @@ plugins:
         as_update: false
       json_feed_enabled: false
       match_path: "notes\/(?!(index\\.md)$).+"
+      categories:
+        - tags
   - material-plausible
