@@ -108,8 +108,9 @@ plugins:
   - social
   - rss:
       date_from_meta:
-        as_creation: "date"
-        as_update: false
+        as_creation: "git_creation_date_localized_raw_iso_datetime"
+        as_update: "git_updated_date_localized_raw_iso_datetime"
+        datetime_format: "%Y-%m-%d %H:%M:%S"
       json_feed_enabled: false
       match_path: "notes\/(?!(index\\.md)$).+"
       categories:
