@@ -111,5 +111,5 @@ plugins:
         as_creation: "date"
         as_update: false
       json_feed_enabled: false
-      match_path: "notes/.*"
+      match_path: "notes\/(?!(index\\.md)$).+"
   - material-plausible
