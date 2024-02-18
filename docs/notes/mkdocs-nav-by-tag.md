@@ -1,7 +1,7 @@
 ---
 title: Navigate mkdocs by tag
 tags:
-  - mkdocs
+  - Mkdocs
 ---
 
 The sidebar for this notes site uses tags for the hierarchy, rather than by the filesystem structure.
