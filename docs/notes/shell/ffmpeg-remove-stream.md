@@ -2,7 +2,6 @@
 title: Strip audio / subtitle stream with ffmpeg
 tags:
   - Media
-emoji: 🎵
 link: https://stackoverflow.com/a/38162168
 ---
 

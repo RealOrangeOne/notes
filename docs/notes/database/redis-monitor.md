@@ -2,7 +2,6 @@
 title: Monitor redis commands
 tags:
   - Redis
-emoji: 👀
 link: https://redis.io/commands/monitor/
 ---
 

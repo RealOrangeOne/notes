@@ -3,7 +3,6 @@ title: Cross-account data transfer
 tags:
   - AWS
 link: https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/
-emoji: 🪣
 ---
 
 To copy bucket contents from bucket in account A to bucket in account B:

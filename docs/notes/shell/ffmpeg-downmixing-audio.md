@@ -2,7 +2,6 @@
 title: Downmixing audio channels
 tags:
   - Media
-emoji: 🎵
 link: https://trac.ffmpeg.org/wiki/AudioChannelManipulation
 ---
 

@@ -2,7 +2,6 @@
 title: Truncate a database from the inside
 tags:
   - PostgreSQL
-emoji: 🐘
 ---
 
 How to delete database from the inside, with only access to that database.

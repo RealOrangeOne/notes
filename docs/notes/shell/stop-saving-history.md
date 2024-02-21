@@ -1,6 +1,5 @@
 ---
 title: Stop saving bash history
-emoji: 🤔
 tags:
   - Shell
 modified: 2022-11-02

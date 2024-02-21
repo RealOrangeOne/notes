@@ -1,6 +1,5 @@
 ---
 title: Example note
-emoji: 👋
 modified: 2022-09-09
 ---
 
