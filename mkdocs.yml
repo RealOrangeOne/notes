@@ -15,7 +15,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/RealOrangeOne
     - icon: fontawesome/solid/rss
-      link: /feed_rss_created.xml
+      link: /feed_rss_updated.xml
   analytics:
     provider: plausible
     domain: notes.theorangeone.net
