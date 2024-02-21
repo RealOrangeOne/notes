@@ -2,8 +2,9 @@
 title: Simple reverse proxy
 tags:
   - Networking
-link: https://docs.mitmproxy.org/stable
 ---
+
+This uses [`mitmproxy`](https://docs.mitmproxy.org/stable), which can proxy both HTTP and HTTPS.
 
 ```
 mitmproxy --mode reverse:http://localhost:8000

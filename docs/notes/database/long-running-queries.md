@@ -2,7 +2,8 @@
 title: Find and kill long running queries
 tags:
   - PostgreSQL
-link: https://medium.com/little-programming-joys/finding-and-killing-long-running-queries-on-postgres-7c4f0449e86d
+sources:
+  - https://medium.com/little-programming-joys/finding-and-killing-long-running-queries-on-postgres-7c4f0449e86d
 ---
 
 # Running queries

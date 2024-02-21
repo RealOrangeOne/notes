@@ -2,7 +2,8 @@
 title: Get credentials for an assumed role
 tags:
   - AWS
-link: https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/
+sources:
+  - https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/
 ---
 
 It's often useful to get regular access keys as if you were assumed into another role. This is possible:

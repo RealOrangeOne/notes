@@ -2,7 +2,8 @@
 title: Strip audio / subtitle stream with ffmpeg
 tags:
   - Media
-link: https://stackoverflow.com/a/38162168
+sources:
+  - https://stackoverflow.com/a/38162168
 ---
 
 ```bash

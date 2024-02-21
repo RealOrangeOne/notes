@@ -2,7 +2,9 @@
 title: Cross-account data transfer
 tags:
   - AWS
-link: https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/
+sources:
+  - https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-s3/
+  - https://stackoverflow.com/a/63804619
 ---
 
 To copy bucket contents from a bucket in account A to a bucket in account B:

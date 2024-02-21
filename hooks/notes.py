@@ -1,5 +1,6 @@
 import jinja2
 from mkdocs.structure.nav import Navigation
+from urllib.parse import urlparse
 
 @jinja2.pass_context
 def get_page(context, slug):
@@ -25,8 +26,11 @@ def get_notes(context):
 
     return sorted(notes, key=lambda p: p.meta["git_creation_date_localized_raw_iso_date"], reverse=True)
 
+def get_domain(url):
+    return urlparse(url).netloc
 
 def on_env(env, config, files):
     env.tests["startswith"] = str.startswith
     env.globals["get_page"] = get_page
     env.globals["get_notes"] = get_notes
+    env.filters["domain"] = get_domain

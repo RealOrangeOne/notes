@@ -2,7 +2,8 @@
 title: Monitor running queries
 tags:
   - PostgreSQL
-link: https://techmango.org/2017/11/04/monitor-running-queries-postgresql/
+sources:
+  - https://techmango.org/2017/11/04/monitor-running-queries-postgresql/
 ---
 
 View a list of running queries:

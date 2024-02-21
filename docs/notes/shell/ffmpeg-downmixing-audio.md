@@ -2,7 +2,8 @@
 title: Downmixing audio channels
 tags:
   - Media
-link: https://trac.ffmpeg.org/wiki/AudioChannelManipulation
+sources:
+  - https://trac.ffmpeg.org/wiki/AudioChannelManipulation
 ---
 
 ```bash

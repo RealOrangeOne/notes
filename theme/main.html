@@ -30,3 +30,11 @@
     <strong>GitHub</strong>
   </a>.
 {% endblock %}
+
+{% block content %}
+  {{ super() }}
+
+  {% if page.meta.sources %}
+  <small>Sources: {% for source in page.meta.sources %}<a href="{{ source }}">{{ source|domain }}</a>{% endfor %}</small>
+  {% endif %}
+{% endblock %}
