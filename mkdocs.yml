@@ -55,6 +55,7 @@ theme:
 hooks:
   - hooks/notes.py
   - hooks/tag_nav.py
+  - hooks/hide_toc.py
 
 # Extensions
 markdown_extensions:
