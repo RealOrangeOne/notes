@@ -2,7 +2,6 @@
 title: Stop saving bash history
 tags:
   - Shell
-modified: 2022-11-02
 ---
 
 ## Disable history for a given session
