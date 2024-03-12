@@ -39,6 +39,11 @@
   {{ super() }}
 
   {% if page.meta.sources %}
-  <small>Sources: {% for source in page.meta.sources %}<a href="{{ source }}">{{ source|domain }}</a>{% endfor %}</small>
+    <small>
+      Sources:
+      {% for source in page.meta.sources %}
+        <a href="{{ source }}">{{ source|domain }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </small>
   {% endif %}
 {% endblock %}
