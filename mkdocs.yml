@@ -10,6 +10,8 @@ extra:
       link: https://theorangeone.net
     - icon: fontawesome/brands/mastodon
       link: https://theorangeone.net/@jake
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/theorangeone.net
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/RealOrangeOne
     - icon: fontawesome/brands/github
