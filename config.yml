@@ -1,0 +1,26 @@
+baseURL: https://notes.theorangeone.net
+title: Notes
+
+enableGitInfo: true
+cleanDestinationDir: true
+
+params:
+  ShowReadingTime: false
+  description: Things I've learned, and need to remember - so future me has a chance of using the knowledge
+  author: Jake Howard
+
+menu:
+  main:
+    - name: All Notes
+      pageRef: /notes
+      weight: 1
+    - name: Tags
+      pageRef: /tags
+      weight: 2
+    - name: Colophon
+      pageRef: /colophon
+      weight: 3
+
+module:
+  imports:
+    - path: github.com/its-ammu/hugo-notebook

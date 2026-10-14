@@ -31,17 +31,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          hugo-version: latest
+          extended: true
 
       - uses: taiki-e/install-action@v2
         with:
           tool: just
-
-      - run: just setup
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -52,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./site
+          path: ./public
 
   deploy:
     environment:
