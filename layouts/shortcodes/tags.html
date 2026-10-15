@@ -1,0 +1,5 @@
+<ul class="tag-cloud">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+    <li><a href="{{ .Page.RelPermalink }}">#{{ .Page.Title }}</a> <span class="count">{{ .Count }}</span></li>
+    {{ end }}
+</ul>
