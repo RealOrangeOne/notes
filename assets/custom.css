@@ -1,0 +1,4 @@
+pagefind-modal-trigger {
+    margin-top: calc(var(--rule) * 0.5);
+    width: 100%;
+}

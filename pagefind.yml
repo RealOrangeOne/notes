@@ -1,0 +1,5 @@
+site: public
+glob: notes/**/*.{html}
+root_selector: main
+exclude_selectors:
+  - .list-page

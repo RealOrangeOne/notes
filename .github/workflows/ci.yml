@@ -39,7 +39,9 @@ jobs:
 
       - uses: taiki-e/install-action@v2
         with:
-          tool: just
+          tool: |
+            just
+            pagefind
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
