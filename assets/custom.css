@@ -2,3 +2,32 @@ pagefind-modal-trigger {
     margin-top: calc(var(--rule) * 0.5);
     width: 100%;
 }
+
+:root {
+    --pf-font: var(--font);
+}
+
+/* https://pagefind.app/docs/css-variables/#dark-mode */
+:root[data-theme="dark"] {
+    --pf-text: var(--ink);
+    --pf-text-secondary: #a0a0a0;
+    --pf-text-muted: #949494;
+    --pf-background: var(--card);
+    --pf-border: var(--card-border);
+    --pf-border-focus: var(--hl-strong);
+    --pf-skeleton: #2a2a2a;
+    --pf-skeleton-shine: #333;
+    --pf-hover: #252525;
+    --pf-mark: var(--ink);
+    --pf-scroll-shadow: rgba(255, 255, 255, 0.1);
+    --pf-outline-focus: var(--margin);
+
+    --pf-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --pf-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --pf-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+    --pf-error-bg: #2a1a1a;
+    --pf-error-border: #5c2828;
+    --pf-error-text: #f87171;
+    --pf-error-text-secondary: #ef4444;
+}
