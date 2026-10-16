@@ -42,7 +42,7 @@ pagefind-modal-trigger {
     font-size: 0.9rem;
     border-left: 2px solid #{"hsl(from var(--hl-strong) calc(h + var(--hue-shift)) s l)"};
 
-    &[data-name="warning"] {
+    &[data-name="warning"], &[data-name="danger"] {
         --hue-shift: -50;
     }
 
