@@ -24,6 +24,11 @@ menu:
     - name: Colophon
       pageRef: /colophon
       weight: 3
+    - name: Source
+      url: https://github.com/RealOrangeOne/notes/
+      weight: 4
+      params:
+        external: true
 
 module:
   imports:
