@@ -35,10 +35,12 @@ IAM policies can have a `Condition`, which must pass for the policy to apply. Th
 
 The above policy allows anyone to access an object, so long as their connection is both secure and using TLS 1.2+.
 
-!!! warning
-    When enforcing HTTPS, S3 will **not** perform a redirect. A HTTP connection is just shown as a 403 (since the policy didn't apply).
+{{% admonition warning %}}
+When enforcing HTTPS, S3 will **not** perform a redirect. A HTTP connection is just shown as a 403 (since the policy didn't apply).
 
-    If you need a redirect, it's best to handle this using CloudFront.
+If you need a redirect, it's best to handle this using CloudFront.
+{{% /admonition %}}
+
 
 ## ACLs
 

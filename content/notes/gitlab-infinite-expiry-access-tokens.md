@@ -6,10 +6,11 @@ tags:
 
 The ability to create personal access tokens without expiry was [deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/369122) in GitLab 15.4 and [removed](https://gitlab.com/gitlab-org/gitlab/-/issues/392855) in GitLab 16.0. For security reasons, expiring tokens makes sense. However, in many cases I'd much rather set them infinite so I can easily put them in version control and not worry about them expiring. If an attacker can access the token, I've already got bigger problems.
 
-!!! warning
-    This solution **only** works on self-hosted GitLab. It will not work with [gitlab.com](https://gitlab.com)!
+{{% admonition warning %}}
+This solution **only** works on self-hosted GitLab. It will not work with [gitlab.com](https://gitlab.com)!
 
 This requires connecting to the database. Exactly how to do that will vary based on your deployment (it's probably `gitlab-psql`).
+{{% /admonition %}}
 
 ## 1. Find the token:
 

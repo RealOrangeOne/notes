@@ -8,8 +8,9 @@ The sidebar for this notes site uses tags for the hierarchy, rather than by the 
 
 This works by retrieving the tags for each note, creating fake sections for each, and replacing the existing sections with those.
 
-!!! warning
-    Here be dragons.
+{{% admonition warning %}}
+Here be dragons.
+{{% /admonition %}}
 
 ```python
 {! ../hooks/tag_nav.py !}

@@ -24,5 +24,6 @@ Setting the `release` dyno type can't be done from the dashboard, but can be don
 heroku ps:type release=Standard-1X -a <app>
 ```
 
-!!! warning
-    When running `Eco` or `Basic` dynos, the release container is configured to match. It's not possible to use other types of dyno on these plans.
+{{% admonition warning %}}
+When running `Eco` or `Basic` dynos, the release container is configured to match. It's not possible to use other types of dyno on these plans.
+{{% /admonition %}}

@@ -12,6 +12,9 @@ params:
 markup:
   highlight:
     style: darcula
+  goldmark:
+    renderer:
+      unsafe: true
 
 menu:
   main:

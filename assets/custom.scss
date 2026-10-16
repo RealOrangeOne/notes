@@ -31,3 +31,36 @@ pagefind-modal-trigger {
     --pf-error-text: #f87171;
     --pf-error-text-secondary: #ef4444;
 }
+
+.admonition {
+    --hue-shift: 0;
+
+    padding: calc(var(--rule) * 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+    font-size: 0.9rem;
+    border-left: 2px solid #{"hsl(from var(--hl-strong) calc(h + var(--hue-shift)) s l)"};
+
+    &[data-name="warning"] {
+        --hue-shift: -50;
+    }
+
+    &[data-name="note"] {
+        --hue-shift: 130;
+    }
+
+    .intro-card__name {
+        margin-bottom: calc(var(--rule) * 0.5);
+        font-size: 1.25em;
+    }
+
+    .intro-card__name, .intro-card__tape {
+        filter: hue-rotate(calc(var(--hue-shift) * 1deg));
+    }
+
+    p {
+        line-height: 1.4;
+        margin: 0.6em 0;
+    }
+}

@@ -1,7 +1,7 @@
 <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 
-{{ $custom_css := resources.Get "custom.css" | minify | fingerprint }}
+{{ $custom_css := resources.Get "custom.scss" | css.Sass | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $custom_css.RelPermalink }}" integrity="{{ $custom_css.Data.Integrity }}">
 
 <link href="https://theorangeone.net/favicon.ico" rel="icon">

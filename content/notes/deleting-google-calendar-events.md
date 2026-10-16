@@ -4,9 +4,9 @@ title: Deleting Google Calendar events owned by someone else
 
 It's sometimes needed to delete calendar events owned by someone else, for example if they've left the organisation.
 
-!!! note
-    This only works as a Workspace admin (or similar high permissions).
-
+{{% admonition note %}}
+This only works as a Workspace admin (or similar high permissions).
+{{% /admonition %}}
 1. Using the sidebar, search for their email address to view their calendar
 2. Find the event (the version in their calendar, not yours)
 3. Delete it

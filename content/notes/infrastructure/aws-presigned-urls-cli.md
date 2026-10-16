@@ -15,5 +15,6 @@ export AWS_ACCESS_KEY_ID=xxx AWS_SECRET_ACCESS_KEY=xxx
 aws s3 presign --expires-in 3600 s3://my-bucket/file.txt
 ```
 
-!!! note
-    URLs are signed with a region of `us-east-1`. Pass `--region` or set `$AWS_REGION` to override. URLs with the wrong region are not valid.
+{{% admonition warning %}}
+URLs are signed with a region of `us-east-1`. Pass `--region` or set `$AWS_REGION` to override. URLs with the wrong region are not valid.
+{{% /admonition %}}
