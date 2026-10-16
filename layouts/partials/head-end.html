@@ -3,3 +3,5 @@
 
 {{ $custom_css := resources.Get "custom.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $custom_css.RelPermalink }}" integrity="{{ $custom_css.Data.Integrity }}">
+
+<link href="https://theorangeone.net/favicon.ico" rel="icon">
