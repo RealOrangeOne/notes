@@ -1,7 +1,8 @@
 ---
 title: Scheduler-only Heroku apps
+date: 2024-03-11
 tags:
-  - Heroku
+  - heroku
 ---
 
 If everything you run is already in Heroku, it can be useful to run even simple scheduled tasks there too, to save integrating and running services on another hosting provider.

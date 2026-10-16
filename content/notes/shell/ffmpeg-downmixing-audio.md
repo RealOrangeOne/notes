@@ -1,7 +1,8 @@
 ---
 title: Downmixing audio channels
+date: 2021-10-27
 tags:
-  - Media
+  - media
 sources:
   - https://trac.ffmpeg.org/wiki/AudioChannelManipulation
 ---

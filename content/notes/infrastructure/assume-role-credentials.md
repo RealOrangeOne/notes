@@ -1,5 +1,6 @@
 ---
 title: Get credentials for an assumed role
+date: 2022-09-13
 tags:
   - AWS
 sources:

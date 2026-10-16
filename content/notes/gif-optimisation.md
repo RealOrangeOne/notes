@@ -1,7 +1,8 @@
 ---
 title: Optimising GIFs
+date: 2024-03-12
 tags:
-  - Images
+  - media
 sources:
   - https://cassidy.codes/blog/2017/04/25/ffmpeg-frames-to-gif-optimization/
   - https://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html
@@ -35,7 +36,7 @@ ffmpeg -i $1 -i $palette -lavfi "$filters,paletteuse=dither=bayer:bayer_scale=5:
 
 It can change the delay between frames, but not strip out frames (thus reducing the FPS), hence the need for `ffmpeg`.
 
-```bash
+```shell-session
 $ gifsicle -i in.gif -o out.gif --lossy -O3 --resize-width 500
 ```
 

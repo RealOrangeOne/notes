@@ -1,5 +1,6 @@
 ---
 title: Using the AWS CLI without installing it
+date: 2024-10-28
 tags:
   - AWS
 sources:
@@ -12,19 +13,19 @@ However, especially for one-off uses, it's quite convenient to not run it at all
 
 1\. Download the CLI:
 
-```bash
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
+```shell-session
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+$ unzip awscliv2.zip
 ```
 
 2\. Make the CLI itself executable:
 
-```bash
-chmod +x ./aws/dist/aws
+```shell-session
+$ chmod +x ./aws/dist/aws
 ```
 
 3\. Run the CLI:
 
-```bash
-./aws/dist/aws help
+```shell-session
+$ ./aws/dist/aws help
 ```

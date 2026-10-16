@@ -1,7 +1,8 @@
 ---
 title: Infinite-expiry access tokens on self-hosted GitLab
+date: 2024-06-04
 tags:
-  - GitLab
+  - gitlab
 ---
 
 The ability to create personal access tokens without expiry was [deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/369122) in GitLab 15.4 and [removed](https://gitlab.com/gitlab-org/gitlab/-/issues/392855) in GitLab 16.0. For security reasons, expiring tokens makes sense. However, in many cases I'd much rather set them infinite so I can easily put them in version control and not worry about them expiring. If an attacker can access the token, I've already got bigger problems.
@@ -14,7 +15,7 @@ This requires connecting to the database. Exactly how to do that will vary based
 
 ## 1. Find the token:
 
-```psql
+```postgres
 gitlabhq_production=> select * from personal_access_tokens order by created_at desc limit 1;
 ```
 
@@ -22,7 +23,7 @@ Assuming you just made the token, it should be the latest. If it's not, you'll n
 
 ## 2. Find the id, and confirm it's the right one:
 
-```psql
+```postgres
 gitlabhq_production=> select * from personal_access_tokens where id=<id>;
 ```
 
@@ -30,7 +31,7 @@ You don't want to change the wrong one!
 
 ## 3. Increase the date
 
-```psql
+```postgres
 update personal_access_tokens set expires_at=expires_at + interval '100 years' where id=<id>;
 ```
 

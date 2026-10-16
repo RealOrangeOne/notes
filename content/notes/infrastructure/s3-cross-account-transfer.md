@@ -1,5 +1,6 @@
 ---
 title: Cross-account data transfer in S3
+date: 2024-02-21
 tags:
   - AWS
 sources:

@@ -1,7 +1,8 @@
 ---
 title: Finding large Prometheus Series
+date: 2026-06-16
 tags:
-  - Prometheus
+  - prometheus
 ---
 
 When looking through a sea of stats, it's hard to find which metrics are consuming the most data (especially when billed by series).
@@ -10,13 +11,13 @@ With a list of metrics, you can start looking at sensible prefixes, such as by e
 
 It's fairly easy to list all metrics, and count them:
 
-```
+```promql
 count({__name__=~".+"})
 ```
 
 This query narrows down series based on the first letter after the exporter prefix (eg `node_`):
 
-```
+```promql
 count by (prefix) (label_replace({__name__=~".+"}, "prefix", "$1 $2", "__name__", "(.+?)_(.{1}).+"))
 ```
 

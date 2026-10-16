@@ -1,5 +1,6 @@
 ---
 title: Find and kill long running queries
+date: 2020-10-07
 tags:
   - PostgreSQL
 sources:

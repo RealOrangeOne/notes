@@ -1,5 +1,6 @@
 ---
 title: Deleting Google Calendar events owned by someone else
+date: 2026-10-13
 ---
 
 It's sometimes needed to delete calendar events owned by someone else, for example if they've left the organisation.

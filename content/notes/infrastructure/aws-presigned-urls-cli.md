@@ -1,5 +1,6 @@
 ---
 title: Create presigned URLs using AWS CLI
+date: 2024-10-29
 tags:
   - AWS
 sources:
@@ -10,9 +11,9 @@ Sometimes, you only have access to the `aws` CLI, and need to generate presigned
 
 The `aws s3 presign` command will do this, creating URLs signed as the currently-authenticated user.
 
-```bash
-export AWS_ACCESS_KEY_ID=xxx AWS_SECRET_ACCESS_KEY=xxx
-aws s3 presign --expires-in 3600 s3://my-bucket/file.txt
+```shell-session
+$ export AWS_ACCESS_KEY_ID=xxx AWS_SECRET_ACCESS_KEY=xxx
+$ aws s3 presign --expires-in 3600 s3://my-bucket/file.txt
 ```
 
 {{% admonition warning %}}

@@ -1,13 +1,32 @@
 ---
 title: Hide short Table of Contents
+date: 2024-02-22
 tags:
-  - Mkdocs
+  - mkdocs
 ---
 
-Some of my notes don't have headings. Others have barely any. However, the Table of Contents area takes up a large area of screen for no reason.
+Some of my notes don't have headings. Others have barely any. However, the Table of Contents area used to take up a large area of screen for no reason.
 
 This hook only shows the Table of Contents area when there are more than 4 headings (at any level).
 
 ```python
-{! ../hooks/hide_toc.py !}
+from mkdocs.structure.toc import TableOfContents
+
+def flatten_toc(item):
+    yield item
+    children = item.items if isinstance(item, TableOfContents) else item.children
+    for subitem in children:
+        yield from flatten_toc(subitem)
+
+
+def on_page_content(html, page, config, files):
+    if not page.url.startswith("notes/") or page.file.src_uri == "notes/index.md":
+        return
+
+    toc = list(flatten_toc(page.toc))
+
+    if len(toc) <= 4:
+        hidden_items = page.meta.setdefault("hide", [])
+        if "toc" not in hidden_items:
+            hidden_items.append("toc")
 ```

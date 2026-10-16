@@ -1,12 +1,13 @@
 ---
 title: Scaling Heroku's release type
+date: 2024-02-22
 tags:
-  - Heroku
+  - heroku
 ---
 
 During `release`, it's possible to consume so much memory, Heroku kills the dyno before it finishes executing.
 
-```
+```text
 heroku[release.xxxx]: Process running mem=1038M(202.8%)
 heroku[release.xxxx]: Error R15 (Memory quota vastly exceeded)
 heroku[release.xxxx]: Stopping process with SIGKILL
@@ -20,8 +21,8 @@ Releases run in a `Standard-1X` dyno, regardless of what the other dynos are set
 
 Setting the `release` dyno type can't be done from the dashboard, but can be done from the CLI:
 
-```
-heroku ps:type release=Standard-1X -a <app>
+```shell-session
+$ heroku ps:type release=Standard-1X -a <app>
 ```
 
 {{% admonition warning %}}

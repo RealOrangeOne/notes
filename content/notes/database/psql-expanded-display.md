@@ -1,5 +1,6 @@
 ---
 title: View wide tables with psql
+date: 2024-01-01
 tags:
   - PostgreSQL
 sources:
@@ -10,7 +11,7 @@ When making a query with lots of columns, it can become so wide that it wraps, m
 
 To combat this, you can toggle "Expanded display" using `\x`:
 
-```psql
+```postgres
 website=# \x
 Expanded display is on.
 website=# \x
@@ -19,7 +20,7 @@ Expanded display is off.
 
 Expanded display changes the output from a conventional table to a key/value mapping:
 
-```psql
+```postgres
 website=# select * from wagtailcore_page order by title limit 1;
 -[ RECORD 1 ]--------------+---------------------------------------
 id                         | 207

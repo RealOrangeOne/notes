@@ -1,23 +1,22 @@
 ---
 title: Stop saving bash history
+date: 2022-11-02
 tags:
-  - Shell
+  - shell
 ---
 
-## Disable history for a given session
-
-```shell
+```shell-session
 $ unset HISTFILE
 ```
 
 or:
 
-```shell
+```shell-session
 $ set +o history
 ```
 
 ## Clear history
 
-```shell
+```shell-session
 $ history -c
 ```

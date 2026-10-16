@@ -1,7 +1,8 @@
 ---
 title: Fixing author date and signature when rebasing git commits
+date: 2026-02-25
 tags:
-  - Git
+  - git
 sources:
   - https://til.simonwillison.net/git/git-filter-repo
   - https://stackoverflow.com/a/73314321
