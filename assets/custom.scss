@@ -64,3 +64,13 @@ pagefind-modal-trigger {
         margin: 0.6em 0;
     }
 }
+
+footer {
+    a {
+        transition: all 0.2s ease;
+
+        &.author:hover {
+            color: #ff7f00;
+        }
+    }
+}
