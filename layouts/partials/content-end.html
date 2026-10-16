@@ -1,0 +1,9 @@
+{{ if .Params.sources }}
+<small>
+    Sources:
+    {{ range $i, $e := .Params.sources }}
+        {{ $url := urls.Parse $e }}
+        {{ if $i }}&nbsp;{{ end }}<a href="{{ $url.String }}">{{ $url.Hostname }}</a>
+    {{ end }}
+</small>
+{{ end }}
