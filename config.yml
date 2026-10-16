@@ -32,6 +32,11 @@ menu:
       weight: 4
       params:
         external: true
+    - name: Website
+      url: https://theorangeone.net
+      weight: 5
+      params:
+        external: true
 
 module:
   imports:
