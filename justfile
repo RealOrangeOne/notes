@@ -6,8 +6,7 @@
     hugo serve
 
 @index-serve:
-    sleep 0.5
-    watchexec -d 500ms -w public -i pagefind -- pagefind --site public
+    watchexec --delay-run 1s -d 1s -- pagefind --site public
 
 @build:
     hugo --minify
