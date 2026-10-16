@@ -1,3 +1,5 @@
 {{ if .IsHome }}
-<p><small><a href="{{ relref . "notes" }}">View all {{ len (where .Site.RegularPages "Type" "notes") }} &rarr;</a></small></p>
+<div class="post-content">
+    <p><small><a href="{{ relref . "notes" }}">View all {{ len (where .Site.RegularPages "Type" "notes") }} &rarr;</a></small></p>
+</div>
 {{ end }}
