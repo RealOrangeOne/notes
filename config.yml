@@ -9,6 +9,10 @@ params:
   description: Things I've learned, and need to remember - so future me has a chance of using the knowledge
   author: Jake Howard
 
+markup:
+  highlight:
+    style: darcula
+
 menu:
   main:
     - name: All Notes
