@@ -11,7 +11,7 @@ params:
 
 markup:
   highlight:
-    style: darcula
+    style: github-dark
   goldmark:
     renderer:
       unsafe: true
